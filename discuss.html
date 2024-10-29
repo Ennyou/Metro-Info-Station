@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-Hants">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>捷運資訊站｜捷運討論</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="icon" href="./icon/train-solid.svg" />
+  </head>
+  <body>
+    <header>
+      <section class="title">
+        <a href="index.html" title="回首頁">
+          <img src="./icon/train-solid.svg" />
+          <h1>捷運資訊站</h1>
+        </a>
+      </section>
+      <nav>
+        <ul>
+          <li id="login">
+            <a href="login.html"
+              ><p><i class="bi bi-person-circle"></i>會員登入</p></a
+            >
+          </li>
+          <li id="discuss">
+            <a href="#"
+              ><p><i class="bi bi-chat-dots"></i>捷運討論</p></a
+            >
+          </li>
+          <li>
+            <a href="info.html"
+              ><p><i class="bi bi-info-circle"></i>更多資訊</p></a
+            >
+          </li>
+          <li>
+            <a href="contact_us.html">
+              <p><i class="bi bi-telephone-fill"></i>聯絡我們</p>
+            </a>
+          </li>
+          <li id="logout" style="display: none">
+            <a href="" onclick="logout()">登出</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <img src="./images/metro_incar.jpg" class="bg" />
+    <main>
+      <div class="ex_page">
+        <div class="bg_mask">
+          <div class="title">
+            <h2>捷運討論區</h2>
+          </div>
+          <div class="dis">
+            <div class="discuss">
+              <label for="dcTitle">標題：</label>
+              <input type="text" name="" id="dcTitle" /><br />
+              <label for="dcContent">內容：</label>
+              <textarea name="" id="dcContent"></textarea><br />
+              <button onclick="discuss()">發表文章</button>
+              <i
+                class="bi bi-trash-fill"
+                style="display: none"
+                id="trashcan"
+                onclick="del()"
+              ></i>
+            </div>
+            <div class="article">
+              <table id="dcTable" style="display: none">
+                <tr>
+                  <th>標題</th>
+                  <th>詳細內容</th>
+                  <th>發表人</th>
+                  <th>時間</th>
+                </tr>
+                <tr>
+                  <th id="th1"></th>
+                  <td id="td1"></td>
+                  <td id="tu1"></td>
+                  <td id="tt1"></td>
+                </tr>
+                <tr>
+                  <th id="th2"></th>
+                  <td id="td2"></td>
+                  <td id="tu2"></td>
+                  <td id="tt2"></td>
+                </tr>
+                <tr>
+                  <th id="th3"></th>
+                  <td id="td3"></td>
+                  <td id="tu3"></td>
+                  <td id="tt3"></td>
+                </tr>
+                <tr>
+                  <th id="th4"></th>
+                  <td id="td4"></td>
+                  <td id="tu4"></td>
+                  <td id="tt4"></td>
+                </tr>
+                <tr>
+                  <th id="th5"></th>
+                  <td id="td5"></td>
+                  <td id="tu5"></td>
+                  <td id="tt5"></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="./javascript/login.js"></script>
+  <script src="./javascript/dicuss.js"></script>
+</html>

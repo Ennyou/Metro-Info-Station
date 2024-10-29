@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hants">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>台中捷運</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="icon" href="./icon/train-solid.svg" />
+  </head>
+  <body>
+    <header>
+      <section class="title">
+        <a href="index.html" title="回首頁">
+          <img src="./icon/train-solid.svg" />
+          <h1>捷運資訊站</h1>
+        </a>
+      </section>
+      <nav>
+        <ul>
+          <li id="login">
+            <a href="login.html"
+              ><p><i class="bi bi-person-circle"></i>會員登入</p></a
+            >
+          </li>
+          <li id="discuss">
+            <a href=""
+              ><p><i class="bi bi-chat-dots"></i>捷運討論</p></a
+            >
+          </li>
+          <li>
+            <a href="info.html"
+              ><p><i class="bi bi-info-circle"></i>更多資訊</p></a
+            >
+          </li>
+          <li>
+            <a href="contact_us.html">
+              <p><i class="bi bi-telephone-fill"></i>聯絡我們</p>
+            </a>
+          </li>
+          <li id="logout" style="display: none">
+            <a href="" onclick="logout()">登出</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="top_space"></div>
+    <nav class="nav_metro">
+      <ul>
+        <li><a href="taipei.html">台北捷運</a></li>
+        <li><a href="newtaipei.html">新北捷運</a></li>
+        <li><a href="taoyuan.html">桃園捷運</a></li>
+        <li class="target"><a href="#">台中捷運</a></li>
+        <li><a href="kaohsiung.html">高雄捷運</a></li>
+      </ul>
+    </nav>
+    <main class="metro_page">
+      <section class="left_nav">
+        <ul>
+          <a href="#"><li>捷運介紹</li></a>
+        </ul>
+        <ul>
+          <a href="./taichung2.html"><li>捷運路線</li></a>
+        </ul>
+        <ul>
+          <a href="./taichung3.html"><li>捷運票價</li></a>
+        </ul>
+      </section>
+      <section class="right">
+        <h2>捷運介紹</h2>
+        <div>
+          <p>
+            臺中都會區大眾捷運系統烏日文心北屯線建設計畫於93年11月經行政院核定，並於98年10月動土。臺中捷運烏日文心北屯線（以下簡稱捷運綠線）全長16.71公里，其中高架段約15.94公里，地面段約0.77公里，路線起自北屯總站，途經松竹路、北屯路、文心路、建國路，終點止於高鐵臺中站，共設置18座車站，1座機廠，1個行控中心（OCC,
+            Operation Control Center）及1個備援行控中心（BOCC, Backup
+            OperationControl Center），初期投入18列電聯車營運。
+            <br />
+            臺中捷運以提供安全、可靠、舒適、便捷的捷運服務為使命，將以運輸本業為基礎，結合附屬事業，期待能在多元化經營、考量服務民眾及政府政策下，追求合理的利潤及效益，以達成企業永續經營之目標。
+            　 <br />
+            捷運綠線為臺中市第一條捷運路線，將積極配合市府「交通任意門（i-Doors）」政策，與台灣高鐵、臺鐵等相關業者合作。透過捷運與周邊其他交通工具整合，並導入智慧交通技術，讓捷運融入市民日常生活，提供最後一哩路優質的及門運輸服務。
+          </p>
+          <img src="./images/car_taichung.jpg" alt="" />
+        </div>
+
+        　
+      </section>
+    </main>
+  </body>
+  <script src="./javascript/login.js"></script>
+</html>

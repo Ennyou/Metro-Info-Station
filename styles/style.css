@@ -1,0 +1,524 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  box-sizing: content-box;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  padding: 0.5rem 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  display: flex;
+  flex-wrap: wrap;
+}
+header section.title {
+  flex: 1 1 22rem;
+}
+header section.title a {
+  display: flex;
+  border: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+}
+header section.title a:link {
+  color: black;
+}
+header section.title a:visited {
+  color: black;
+}
+header section.title a img {
+  width: 4rem;
+  height: 4rem;
+}
+header section.title a h1 {
+  font-size: 3rem;
+}
+header nav {
+  flex: 5 1 35rem;
+  align-content: center;
+}
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  list-style-type: none;
+}
+header nav ul li {
+  margin-right: 2rem;
+  padding-right: 2rem;
+}
+header nav ul a {
+  color: rgb(0, 180, 150);
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: 0.5s;
+}
+header nav ul a:link {
+  color: rgb(0, 180, 150);
+}
+header nav ul a:visited {
+  color: rgb(0, 180, 150);
+}
+header nav ul a:hover {
+  color: blue;
+}
+
+main.index section.page1 {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+main.index section.page1 img.page1_bg {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  max-height: 100vh;
+}
+main.index section.page1 div.page1 {
+  margin: 5rem;
+  padding: 5rem 10rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: 40%;
+  border-radius: 1rem;
+  translate: 0 -50%;
+}
+main.index section.page1 div.page1 p {
+  display: block;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 1000px) {
+  #page1Intro {
+    display: none;
+  }
+}
+@keyframes index_down {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: 50px;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+div.gap {
+  height: 3rem;
+}
+
+section.page2 {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+section.page2 img.page2_bg {
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  height: 100vh;
+  width: 100%;
+}
+section.page2 div.metro {
+  padding: 5rem 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 55%;
+  translate: 0 -50%;
+}
+section.page2 div.metro a {
+  text-decoration: none;
+  color: rgb(0, 180, 150);
+}
+section.page2 div.metro img {
+  flex: 1 1 100px;
+  width: 15vw;
+  border: 10px solid rgb(0, 180, 150);
+  border-radius: 25%;
+}
+section.page2 div.metro img:hover {
+  background-color: white;
+  padding: 0.75rem;
+}
+section.page2 div.metro p {
+  font-size: 2rem;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 3rem;
+}
+
+div.down {
+  text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  translate: -50% 0;
+  font-size: 6rem;
+  animation-name: index_down;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+div.down a {
+  color: white;
+}
+div.down:hover {
+  cursor: pointer;
+}
+
+section.page3 {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+section.page3 img.page3_bg {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: -1;
+}
+section.page3 div.p3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+section.page3 div.p3 h2 {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+  letter-spacing: 0.5rem;
+  text-indent: 0.5rem;
+  font-weight: lighter;
+  margin: 10rem 0 1rem 0;
+}
+section.page3 div.p3 div {
+  display: flex;
+  justify-content: space-around;
+}
+section.page3 div.p3 div iframe {
+  margin: 2rem;
+}
+
+img.bg {
+  min-height: 100vh;
+  position: fixed;
+  width: 100%;
+  z-index: -5;
+  top: 7rem;
+  left: 0;
+}
+
+div.login {
+  animation-name: fade;
+  animation-duration: 1s;
+  margin-top: 7rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(0, 180, 150);
+}
+div.login > div {
+  margin: 2rem;
+  border-radius: 1rem;
+  display: grid;
+  justify-content: center;
+  width: 800px;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: white;
+  padding-bottom: 3rem;
+}
+div.login > div i {
+  text-align: center;
+  font-size: 6rem;
+}
+div.login > div h2 {
+  text-align: center;
+  font-size: 3rem;
+}
+div.login > div form {
+  margin: 1rem;
+  font-size: 2rem;
+}
+div.login > div form input {
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+div.login > div a {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+div.login > div button {
+  width: 100%;
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+div.ex_page {
+  animation-name: fade;
+  animation-duration: 1s;
+  margin-top: 7rem;
+  width: 100%;
+  padding: 3rem;
+}
+div.ex_page div.bg_mask {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 3rem;
+  padding: 2rem;
+  justify-content: center;
+}
+div.ex_page div.title {
+  margin: 3rem;
+  padding: 2rem;
+  background-color: rgb(0, 180, 150);
+  font-size: 2rem;
+  border-radius: 3rem;
+  color: white;
+  text-align: center;
+  letter-spacing: 2rem;
+  text-indent: 2rem;
+}
+div.ex_page div.title h2 {
+  font-weight: normal;
+}
+div.ex_page div.dis {
+  min-height: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+div.ex_page div.discuss {
+  display: flexbox;
+  align-items: space-around;
+  font-size: 1.5rem;
+}
+div.ex_page div.discuss input {
+  font-size: 1.5rem;
+}
+div.ex_page div.discuss textarea {
+  width: 300px;
+  height: 250px;
+}
+div.ex_page div.discuss button {
+  padding: 0.3rem;
+  font-size: 1rem;
+}
+div.ex_page div.discuss button:hover {
+  cursor: pointer;
+}
+div.ex_page div.discuss i:hover {
+  cursor: pointer;
+  color: blue;
+}
+div.ex_page div.article {
+  flex: 1 1 300px;
+  display: flex;
+}
+div.ex_page div.article table {
+  width: 100%;
+  text-align: center;
+}
+div.ex_page div.article tr {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+div.ex_page div.article th {
+  min-width: 160px;
+}
+div.ex_page section.info_page fieldset {
+  padding: 2rem;
+  margin: 2rem;
+  border: 5px solid rgb(0, 180, 150);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+div.ex_page section.info_page fieldset:hover {
+  background-color: white;
+}
+div.ex_page section.info_page fieldset legend {
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  border: 5px solid rgb(0, 180, 150);
+  border-radius: 2rem;
+  background-color: rgba(223, 248, 218, 0.5);
+  color: rgb(0, 180, 150);
+}
+div.ex_page section.info_page fieldset p {
+  font-size: 1.5rem;
+  color: black;
+}
+div.ex_page section.info_page fieldset a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+div.ex_page section.info_page fieldset a:link {
+  color: rgb(0, 180, 150);
+}
+div.ex_page section.info_page fieldset a:visited {
+  color: rgb(0, 180, 150);
+}
+div.ex_page section.info_page fieldset a:hover {
+  color: blue;
+}
+
+section.contact_page {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5rem;
+}
+section.contact_page div.contact_info {
+  align-content: center;
+}
+section.contact_page div.contact_info p {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+div.top_space {
+  height: 7rem;
+  background-color: rgb(0, 180, 150);
+}
+
+nav.nav_metro {
+  top: 7rem;
+}
+nav.nav_metro ul {
+  background-color: rgb(0, 180, 150);
+  display: flex;
+  list-style: none;
+  justify-content: start;
+}
+nav.nav_metro ul li {
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  margin: 0 0.5rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  transition: 0.5s;
+}
+nav.nav_metro ul li:hover {
+  background-color: rgb(0, 150, 150);
+}
+nav.nav_metro ul li a {
+  color: white;
+}
+nav.nav_metro ul li.target {
+  background-color: white;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: none;
+}
+nav.nav_metro ul li.target a {
+  color: rgb(0, 180, 150);
+}
+
+main.metro_page {
+  display: flex;
+  flex-wrap: wrap;
+}
+main.metro_page section.left_nav {
+  flex: 1 1 200px;
+  padding-top: 2rem;
+}
+main.metro_page section.left_nav ul {
+  margin: 1rem;
+  background-color: rgb(0, 180, 150);
+  padding: 1rem;
+  transition: 0.5s;
+}
+main.metro_page section.left_nav ul:hover {
+  background-color: rgb(0, 150, 150);
+  margin-left: 30px;
+}
+main.metro_page section.left_nav ul a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+}
+main.metro_page section.left_nav ul a li {
+  list-style: none;
+}
+main.metro_page section.right {
+  animation: fade 1s;
+  flex: 6 1 800px;
+}
+main.metro_page section.right h2 {
+  font-size: 3rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-bottom: 5px solid rgb(0, 180, 150);
+  font-weight: lighter;
+}
+main.metro_page section.right div {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+main.metro_page section.right div p {
+  flex: 3 1 300px;
+  letter-spacing: 2px;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  margin: 1rem;
+}
+main.metro_page section.right div img {
+  flex: 1 1 450px;
+  margin: 1rem;
+  width: 450px;
+}
+main.metro_page section.right img.map {
+  margin: 1rem;
+  width: 800px;
+}
+main.metro_page section.right div.ticket {
+  margin: 1rem;
+  font-size: 1.5rem;
+  display: block;
+}
+main.metro_page section.right div.ticket label {
+  padding: 1rem;
+}
+main.metro_page section.right div.ticket select {
+  font-size: 1.5rem;
+  width: 300px;
+}
+main.metro_page section.right div.ticket button {
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  letter-spacing: 0.1rem;
+}
+main.metro_page #ticketPrice {
+  display: inline;
+  font-size: 3rem;
+}/*# sourceMappingURL=style.css.map */

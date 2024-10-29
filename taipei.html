@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hants">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>台北捷運</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="icon" href="./icon/train-solid.svg" />
+  </head>
+  <body>
+    <header>
+      <section class="title">
+        <a href="index.html" title="回首頁">
+          <img src="./icon/train-solid.svg" />
+          <h1>捷運資訊站</h1>
+        </a>
+      </section>
+      <nav>
+        <ul>
+          <li id="login">
+            <a href="login.html"
+              ><p><i class="bi bi-person-circle"></i>會員登入</p></a
+            >
+          </li>
+          <li id="discuss">
+            <a href=""
+              ><p><i class="bi bi-chat-dots"></i>捷運討論</p></a
+            >
+          </li>
+          <li>
+            <a href="info.html"
+              ><p><i class="bi bi-info-circle"></i>更多資訊</p></a
+            >
+          </li>
+          <li>
+            <a href="contact_us.html">
+              <p><i class="bi bi-telephone-fill"></i>聯絡我們</p>
+            </a>
+          </li>
+          <li id="logout" style="display: none">
+            <a href="" onclick="logout()">登出</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="top_space"></div>
+    <nav class="nav_metro">
+      <ul>
+        <li class="target"><a href="#">台北捷運</a></li>
+        <li><a href="newtaipei.html">新北捷運</a></li>
+        <li><a href="taoyuan.html">桃園捷運</a></li>
+        <li><a href="taichung.html">台中捷運</a></li>
+        <li><a href="kaohsiung.html">高雄捷運</a></li>
+      </ul>
+    </nav>
+    <main class="metro_page">
+      <section class="left_nav">
+        <ul>
+          <a href="#"><li>捷運介紹</li></a>
+        </ul>
+        <ul>
+          <a href="taipei2.html"><li>捷運路線</li></a>
+        </ul>
+        <ul>
+          <a href="#"><li>捷運票價</li></a>
+        </ul>
+      </section>
+      <section class="right">
+        <h2>捷運介紹</h2>
+        <div>
+          <p>
+            臺北都會區大眾捷運系統，簡稱臺北捷運、北捷，是服務臺北都會區的大眾捷運系統，路網範圍涵蓋臺北市及新北市，為臺灣第一座投入營運、以及規模最大的都市軌道運輸系統。營運機構為臺北捷運公司，工程興建則另由臺北市政府捷運工程局負責。自1996年開始營運，目前共有5條主要路線、2條單站支線與1條纜車線，路線距離136.9公里、營運距離131.1公里，營運車站共117站，乃臺北都會區的交通骨幹。
+            <br />
+            民國85年3月28日，國內第一條捷運木柵線正式通車，開啟大台北地區的捷運里程。隨著捷運路網不斷擴大，將大台北地區生活圈更緊密地連結。未來，台北捷運將以開放創新之觀念與服務，型塑更美好的城市生活與文化，打造「一流捷運，美好台北」。
+          </p>
+          <img src="./images/car_taipei.jpg" alt="" />
+        </div>
+
+        　
+      </section>
+    </main>
+  </body>
+  <script src="./javascript/login.js"></script>
+</html>
