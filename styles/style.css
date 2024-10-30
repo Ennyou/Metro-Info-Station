@@ -81,6 +81,7 @@ div.page1 {
   padding-top: 7rem;
 }
 div.page1 > div.intro {
+  animation: fade 2s;
   margin: 5rem 10rem 5rem 10rem;
   border-radius: 2rem;
   background-color: rgba(255, 255, 255, 0.3);
@@ -96,6 +97,7 @@ div.page1 > div.intro p {
   text-align: center;
 }
 div.page1 > div.news {
+  animation: fade 1s;
   background-color: rgba(255, 255, 255, 0.3);
   margin: 1rem 10rem 0 10rem;
   border-radius: 2rem;
