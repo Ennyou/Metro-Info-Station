@@ -83,7 +83,7 @@ main.index {
     }
     div.page1 {
       margin: 5rem;
-      padding: 5rem 10rem;
+      padding: 5rem 8rem;
       background-color: rgba(255, 255, 255, 0.3);
       position: absolute;
       top: 40%;
@@ -92,7 +92,7 @@ main.index {
       p {
         display: block;
         color: white;
-        font-size: 2rem;
+        font-size: 2.2em;
         text-align: center;
         text-overflow: ellipsis;
       }
@@ -347,7 +347,7 @@ div.ex_page {
     flex: 1 1 300px;
     display: flex;
     table {
-      width: 100%;
+      max-width: 2000px;
       text-align: center;
     }
     tr {
@@ -355,6 +355,10 @@ div.ex_page {
     }
     th {
       min-width: 160px;
+    }
+    td {
+      max-width: 500px;
+      overflow: auto;
     }
   }
   section.info_page {
@@ -524,11 +528,27 @@ main.metro_page {
         margin: 0.5rem;
         letter-spacing: 0.1rem;
       }
+      table {
+        background-color: rgba(0, 150, 150, 0.15);
+        border: 2px solid black;
+        border-collapse: collapse;
+        text-align: center;
+        tr,
+        td,
+        th {
+          min-width: 300px;
+          padding: 0.5rem;
+          border: 2px solid black;
+        }
+      }
     }
   }
 
   #ticketPrice {
     display: inline;
     font-size: 3rem;
+  }
+  #time {
+    display: inline;
   }
 }

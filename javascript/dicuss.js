@@ -1,5 +1,5 @@
 if (localStorage.getItem("th1") != undefined) {
-  document.getElementById("dcTable").style = "display:flex;";
+  document.getElementById("dcTable").style = "display:inline;";
 }
 
 document.getElementById("th1").innerText = localStorage.getItem("th1");
@@ -29,50 +29,56 @@ if (localStorage.getItem("user") == "admin") {
 
 function discuss() {
   if (localStorage.getItem("user") == undefined) {
-    alert("尚未登入");
+    alert("請先登入");
   } else {
-    if (confirm("確定發表？")) {
-      if (localStorage.getItem("th1") == undefined) {
-        var dcTitle = document.getElementById("dcTitle").value;
-        var dcContent = document.getElementById("dcContent").value;
-        localStorage.setItem("th1", dcTitle);
-        localStorage.setItem("td1", dcContent);
-        localStorage.setItem("tu1", localStorage.getItem("user"));
-        localStorage.setItem("tt1", new Date());
-      } else if (localStorage.getItem("th2") == undefined) {
-        var dcTitle = document.getElementById("dcTitle").value;
-        var dcContent = document.getElementById("dcContent").value;
-        localStorage.setItem("th2", dcTitle);
-        localStorage.setItem("td2", dcContent);
-        localStorage.setItem("tu2", localStorage.getItem("user"));
-        localStorage.setItem("tt2", new Date());
-      } else if (localStorage.getItem("th3") == undefined) {
-        var dcTitle = document.getElementById("dcTitle").value;
-        var dcContent = document.getElementById("dcContent").value;
-        localStorage.setItem("th3", dcTitle);
-        localStorage.setItem("td3", dcContent);
-        localStorage.setItem("tu3", localStorage.getItem("user"));
-        localStorage.setItem("tt3", new Date());
-      } else if (localStorage.getItem("th4") == undefined) {
-        var dcTitle = document.getElementById("dcTitle").value;
-        var dcContent = document.getElementById("dcContent").value;
-        localStorage.setItem("th4", dcTitle);
-        localStorage.setItem("td4", dcContent);
-        localStorage.setItem("tu4", localStorage.getItem("user"));
-        localStorage.setItem("tt4", new Date());
-      } else if (localStorage.getItem("th5") == undefined) {
-        var dcTitle = document.getElementById("dcTitle").value;
-        var dcContent = document.getElementById("dcContent").value;
-        localStorage.setItem("th5", dcTitle);
-        localStorage.setItem("td5", dcContent);
-        localStorage.setItem("tu5", localStorage.getItem("user"));
-        localStorage.setItem("tt5", new Date());
+    if (
+      document.getElementById("dcTitle").value == "" ||
+      document.getElementById("dcContent").value == ""
+    ) {
+      alert("標題及內容不得為空");
+    } else {
+      if (confirm("確定發表？")) {
+        if (localStorage.getItem("th1") == undefined) {
+          var dcTitle = document.getElementById("dcTitle").value;
+          var dcContent = document.getElementById("dcContent").value;
+          localStorage.setItem("th1", dcTitle);
+          localStorage.setItem("td1", dcContent);
+          localStorage.setItem("tu1", localStorage.getItem("user"));
+          localStorage.setItem("tt1", new Date());
+        } else if (localStorage.getItem("th2") == undefined) {
+          var dcTitle = document.getElementById("dcTitle").value;
+          var dcContent = document.getElementById("dcContent").value;
+          localStorage.setItem("th2", dcTitle);
+          localStorage.setItem("td2", dcContent);
+          localStorage.setItem("tu2", localStorage.getItem("user"));
+          localStorage.setItem("tt2", new Date());
+        } else if (localStorage.getItem("th3") == undefined) {
+          var dcTitle = document.getElementById("dcTitle").value;
+          var dcContent = document.getElementById("dcContent").value;
+          localStorage.setItem("th3", dcTitle);
+          localStorage.setItem("td3", dcContent);
+          localStorage.setItem("tu3", localStorage.getItem("user"));
+          localStorage.setItem("tt3", new Date());
+        } else if (localStorage.getItem("th4") == undefined) {
+          var dcTitle = document.getElementById("dcTitle").value;
+          var dcContent = document.getElementById("dcContent").value;
+          localStorage.setItem("th4", dcTitle);
+          localStorage.setItem("td4", dcContent);
+          localStorage.setItem("tu4", localStorage.getItem("user"));
+          localStorage.setItem("tt4", new Date());
+        } else if (localStorage.getItem("th5") == undefined) {
+          var dcTitle = document.getElementById("dcTitle").value;
+          var dcContent = document.getElementById("dcContent").value;
+          localStorage.setItem("th5", dcTitle);
+          localStorage.setItem("td5", dcContent);
+          localStorage.setItem("tu5", localStorage.getItem("user"));
+          localStorage.setItem("tt5", new Date());
+        }
+        location.reload();
       }
-      location.reload();
     }
   }
 }
-
 function del() {
   if (confirm("確定刪除所有文章？")) {
     localStorage.removeItem("th1");

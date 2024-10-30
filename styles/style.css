@@ -84,7 +84,7 @@ main.index section.page1 img.page1_bg {
 }
 main.index section.page1 div.page1 {
   margin: 5rem;
-  padding: 5rem 10rem;
+  padding: 5rem 8rem;
   background-color: rgba(255, 255, 255, 0.3);
   position: absolute;
   top: 40%;
@@ -94,7 +94,7 @@ main.index section.page1 div.page1 {
 main.index section.page1 div.page1 p {
   display: block;
   color: white;
-  font-size: 2rem;
+  font-size: 2.2em;
   text-align: center;
   text-overflow: ellipsis;
 }
@@ -341,7 +341,7 @@ div.ex_page div.article {
   display: flex;
 }
 div.ex_page div.article table {
-  width: 100%;
+  max-width: 2000px;
   text-align: center;
 }
 div.ex_page div.article tr {
@@ -349,6 +349,10 @@ div.ex_page div.article tr {
 }
 div.ex_page div.article th {
   min-width: 160px;
+}
+div.ex_page div.article td {
+  max-width: 500px;
+  overflow: auto;
 }
 div.ex_page section.info_page fieldset {
   padding: 2rem;
@@ -518,7 +522,23 @@ main.metro_page section.right div.ticket button {
   margin: 0.5rem;
   letter-spacing: 0.1rem;
 }
+main.metro_page section.right div.ticket table {
+  background-color: rgba(0, 150, 150, 0.15);
+  border: 2px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+main.metro_page section.right div.ticket table tr,
+main.metro_page section.right div.ticket table td,
+main.metro_page section.right div.ticket table th {
+  min-width: 300px;
+  padding: 0.5rem;
+  border: 2px solid black;
+}
 main.metro_page #ticketPrice {
   display: inline;
   font-size: 3rem;
+}
+main.metro_page #time {
+  display: inline;
 }/*# sourceMappingURL=style.css.map */
