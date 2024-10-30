@@ -102,9 +102,13 @@ div.page1 > div.news {
 }
 div.page1 > div.news p {
   text-align: center;
+  padding: 0 2rem;
   color: black;
   font-size: 3rem;
   animation: fade 1s;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 div.page2 {

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>高雄捷運</title>
+    <title>台北捷運</title>
     <link rel="stylesheet" href="./styles/style.css" />
     <link
       rel="stylesheet"
@@ -51,19 +51,19 @@
     <nav class="nav_metro">
       <ul>
         <li><a href="taipei.html">台北捷運</a></li>
-        <li><a href="newtaipei.html">新北捷運</a></li>
+        <li class="target"><a href="#">新北捷運</a></li>
         <li><a href="taoyuan.html">桃園捷運</a></li>
         <li><a href="taichung.html">台中捷運</a></li>
-        <li class="target"><a href="#">高雄捷運</a></li>
+        <li><a href="kaohsiung.html">高雄捷運</a></li>
       </ul>
     </nav>
     <main class="metro_page">
       <section class="left_nav">
         <ul>
-          <a href="kaohsiung.html"><li>捷運介紹</li></a>
+          <a href="newtaipei.html"><li>捷運介紹</li></a>
         </ul>
         <ul>
-          <a href="kaohsiung2.html"><li>捷運路線</li></a>
+          <a href="#"><li>捷運路線</li></a>
         </ul>
         <ul>
           <a href="#"><li>捷運票價</li></a>
@@ -73,26 +73,8 @@
         </ul>
       </section>
       <section class="right">
-        <h2>捷運票價</h2>
-        <div class="ticket">
-          <form action="">
-            <div class="start">
-              <label for="station_start">起始站：</label>
-              <select name="station_start" id="station_start">
-                <option value="" hidden>選擇車站</option>
-              </select>
-            </div>
-            <div class="end">
-              <label for="station_end">終點站：</label>
-              <select name="station_end" id="station_end">
-                <option value="" hidden>選擇車站</option>
-              </select>
-            </div>
-            <br />
-            <button>查看票價</button>
-          </form>
-          <div id="ticketPrice"></div>
-        </div>
+        <h2>捷運路線</h2>
+        <img class="map" src="./images/map_taipei.jpg" alt="" />
       </section>
     </main>
   </body>
