@@ -64,6 +64,7 @@
   </body>
   <script>
     function login() {
+      event.preventDefault();
       var account = document.getElementById("account").value;
       var password = document.getElementById("password").value;
       if (account == "admin" && password == "zxc318579") {
@@ -71,13 +72,14 @@
         localStorage.setItem("login", "true");
         window.location.href = "index.html";
         alert("登入成功");
-      } else if (account == "menber1" && password == "password") {
+      } else if (account == "member1" && password == "password") {
         localStorage.setItem("user", account);
         localStorage.setItem("login", "true");
         window.location.href = "index.html";
         alert("登入成功");
       } else {
         alert("帳號或密碼錯誤");
+        location.reload();
       }
     }
     //reset ALL DATA
